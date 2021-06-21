@@ -1,4 +1,10 @@
 # Wabanex
+## About
+
+This project was made by [dotprestto](https://github.com/dotprestto) in the Next Level Week (NLW) by [Rocketseat Education](https://github.com/rocketseat-education).
+
+
+## Run 
 
 To start your Phoenix server:
 
