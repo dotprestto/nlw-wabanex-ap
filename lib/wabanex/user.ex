@@ -2,6 +2,7 @@ defmodule Wabanex.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @primary_key {:id, :binary_id, autogenerate: true}
   @fields [:email, :password, :name] # variável de módule - constante de módulo
 
   schema "users" do
