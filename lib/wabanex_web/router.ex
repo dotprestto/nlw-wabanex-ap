@@ -11,7 +11,7 @@ defmodule WabanexWeb.Router do
     get "/", IMCController, :index
   end
 
-  scope "/api", WabanexWeb do
+  scope "/api" do
     pipe_through :api
 
     forward "/graphql", Absinthe.Plug, schema: WabanexWeb.Schema
