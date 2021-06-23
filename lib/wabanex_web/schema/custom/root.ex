@@ -9,6 +9,7 @@ defmodule WabanexWeb.Schema.Types.Root do
     field :get_user, type: :user do
       arg :id, non_null(:uuid4)
 
+      # é igual a fn params, context: UserResolver.get(params, context) end
       resolve &UserResolver.get/2
     end
   end
