@@ -3,18 +3,20 @@ defmodule Wabanex.User do
   import Ecto.Changeset
 
   @primary_key {:id, :binary_id, autogenerate: true}
-  @fields [:email, :password, :name] # variável de modulo - constante de módulo
+  # variável de modulo - constante de módulo
+  @fields [:email, :password, :name]
 
   schema "users" do
-      field :email, :string
-      field :name, :string
-      field :password, :string
+    field :email, :string
+    field :name, :string
+    field :password, :string
 
-      timestamps()
+    timestamps()
   end
 
   def changeset(params) do
-    %__MODULE__{} # __MODULE__ = Wabanex.User
+    # __MODULE__ = Wabanex.User
+    %__MODULE__{}
     |> cast(params, @fields)
     |> validate_required(@fields)
     |> validate_length(:password, min: 6)
