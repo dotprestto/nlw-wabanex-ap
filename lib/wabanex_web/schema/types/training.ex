@@ -7,14 +7,14 @@ defmodule WabanexWeb.Schema.Types.Training do
 
   object :training do
     field :id, non_null(:uuid4)
-    field :start_date, non_null(:date)
-    field :end_date, non_null(:date)
-    field :exercises, list_of(Exercise)
+    field :start_date, non_null(:string)
+    field :end_date, non_null(:string)
+    field :exercises, list_of(:exercise)
   end
 
   input_object :create_training_input do
-    field :start_date, non_null(:date), description: "Training's start_date"
-    field :end_date, non_null(:date), description: "Training's end_date"
+    field :start_date, non_null(:string), description: "Training's start_date"
+    field :end_date, non_null(:string), description: "Training's end_date"
     field :exercises, list_of(:create_exercise_input), description: "Training's exercises"
   end
 end
