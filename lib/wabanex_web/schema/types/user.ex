@@ -1,7 +1,8 @@
 defmodule WabanexWeb.Schema.Types.User do
   use Absinthe.Schema.Notation
 
-  import_types WabanexWeb.Schema.Types.Custom.UUID4
+  # Precisa estar definido em um lugar só, por isso foi removido
+  # import_types WabanexWeb.Schema.Types.Custom.UUID4
 
   @desc "Logic user representation"
 
