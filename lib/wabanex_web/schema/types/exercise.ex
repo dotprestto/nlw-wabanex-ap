@@ -8,13 +8,13 @@ defmodule WabanexWeb.Schema.Types.Exercise do
     field :name, non_null(:string)
     field :repetitions, non_null(:string)
     field :youtube_video_url, non_null(:string)
-    field :procotol_description, non_null(:string)
+    field :protocol_description, non_null(:string)
   end
 
   input_object :create_exercise_input do
     field :name, non_null(:string), description: "Exercise's name"
     field :youtube_video_url, non_null(:string), description: "Exercise's video url"
-    field :procotol_description, non_null(:string), description: "Exercise's protocol"
+    field :protocol_description, non_null(:string), description: "Exercise's protocol"
     field :repetitions, non_null(:string), description: "Exercise's repetitions"
   end
 end
