@@ -1,15 +1,16 @@
 defmodule Wabanex.IMC do
   def calculate(%{"filename" => filename}) do
     filename
-    |> File.read
+    |> File.read()
     |> handle_file
   end
 
   defp handle_file({:ok, content}) do
-    data = content
-    |> String.split("\n")
-    |> Enum.map(fn line -> parse_line(line) end)
-    |> Enum.into(%{})
+    data =
+      content
+      |> String.split("\n")
+      |> Enum.map(fn line -> parse_line(line) end)
+      |> Enum.into(%{})
 
     {:ok, data}
   end
