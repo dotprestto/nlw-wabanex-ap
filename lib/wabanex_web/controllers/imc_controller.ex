@@ -3,12 +3,10 @@ defmodule WabanexWeb.IMCController do
 
   alias Wabanex.IMC
 
-
   def index(conn, params) do
     params
-    |> IMC.calculate
+    |> IMC.calculate()
     |> handle_response(conn)
-
   end
 
   defp handle_response({:ok, result}, conn), do: render_response(conn, result, :ok)
